@@ -1,0 +1,182 @@
+*** This is NuSMV 2.6.0 (compiled on Wed Oct 14 15:36:00 2015)
+*** Enabled addons are: compass
+*** For more information on NuSMV see <http://nusmv.fbk.eu>
+*** or email to <nusmv-users@list.fbk.eu>.
+*** Please report bugs to <Please report bugs to <nusmv-users@fbk.eu>>
+
+*** Copyright (c) 2010-2014, Fondazione Bruno Kessler
+
+*** This version of NuSMV is linked to the CUDD library version 2.4.1
+*** Copyright (c) 1995-2004, Regents of the University of Colorado
+
+*** This version of NuSMV is linked to the MiniSat SAT solver. 
+*** See http://minisat.se/MiniSat.html
+*** Copyright (c) 2003-2006, Niklas Een, Niklas Sorensson
+*** Copyright (c) 2007-2010, Niklas Sorensson
+
+WARNING *** This version of NuSMV is linked to the zchaff SAT         ***
+WARNING *** solver (see http://www.princeton.edu/~chaff/zchaff.html). ***
+WARNING *** Zchaff is used in Bounded Model Checking when the         ***
+WARNING *** system variable "sat_solver" is set to "zchaff".          ***
+WARNING *** Notice that zchaff is for non-commercial purposes only.   ***
+WARNING *** NO COMMERCIAL USE OF ZCHAFF IS ALLOWED WITHOUT WRITTEN    ***
+WARNING *** PERMISSION FROM PRINCETON UNIVERSITY.                     ***
+WARNING *** Please contact Sharad Malik (malik@ee.princeton.edu)      ***
+WARNING *** for details.                                              ***
+
+-- specification !(!(red = black) U red = 999)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 1.1 <-
+    red = 203
+    black = 201
+    turn = TRUE
+    dir = left
+    garo = 0
+    sero = 0
+    blkStart = 201
+    redGoal = 402
+    redStart = 203
+    r_notDown = FALSE
+    b_notDown = FALSE
+    r_notUp = FALSE
+    b_notUp = FALSE
+    r_notRight = FALSE
+    b_notRight = TRUE
+    r_notLeft = TRUE
+    b_notLeft = TRUE
+  -> State: 1.2 <-
+    turn = FALSE
+    dir = up
+  -> State: 1.3 <-
+    turn = TRUE
+    dir = right
+  -> State: 1.4 <-
+    red = 204
+    turn = FALSE
+    dir = up
+    r_notLeft = FALSE
+  -> State: 1.5 <-
+    turn = TRUE
+    dir = right
+  -> State: 1.6 <-
+    red = 205
+    turn = FALSE
+    dir = up
+  -> State: 1.7 <-
+    turn = TRUE
+    dir = right
+  -> State: 1.8 <-
+    red = 206
+    turn = FALSE
+    dir = up
+  -> State: 1.9 <-
+    turn = TRUE
+    dir = right
+  -> State: 1.10 <-
+    red = 207
+    turn = FALSE
+    dir = up
+    r_notRight = TRUE
+  -> State: 1.11 <-
+    turn = TRUE
+  -> State: 1.12 <-
+    red = 107
+    turn = FALSE
+    r_notUp = TRUE
+  -> State: 1.13 <-
+    black = 101
+    turn = TRUE
+    dir = down
+    b_notUp = TRUE
+    b_notRight = FALSE
+  -> State: 1.14 <-
+    red = 207
+    black = 102
+    turn = FALSE
+    dir = up
+    r_notUp = FALSE
+    b_notLeft = FALSE
+  -> State: 1.15 <-
+    black = 103
+    turn = TRUE
+    dir = down
+  -> State: 1.16 <-
+    red = 307
+    black = 104
+    turn = FALSE
+    dir = up
+    r_notLeft = TRUE
+  -> State: 1.17 <-
+    black = 105
+    turn = TRUE
+    dir = down
+  -> State: 1.18 <-
+    red = 407
+    black = 106
+    turn = FALSE
+    dir = up
+    r_notDown = TRUE
+    r_notLeft = FALSE
+  -> State: 1.19 <-
+    black = 107
+    turn = TRUE
+    dir = left
+    b_notRight = TRUE
+  -> State: 1.20 <-
+    red = 406
+    black = 207
+    turn = FALSE
+    dir = up
+    r_notUp = TRUE
+    b_notUp = FALSE
+    r_notRight = FALSE
+  -> State: 1.21 <-
+    black = 206
+    turn = TRUE
+    dir = left
+    b_notRight = FALSE
+  -> State: 1.22 <-
+    red = 405
+    black = 306
+    turn = FALSE
+    dir = up
+    b_notDown = TRUE
+    r_notUp = FALSE
+    b_notRight = TRUE
+    b_notLeft = TRUE
+  -> State: 1.23 <-
+    turn = TRUE
+    dir = left
+  -> State: 1.24 <-
+    red = 404
+    turn = FALSE
+    dir = up
+  -> State: 1.25 <-
+    turn = TRUE
+    dir = left
+  -> State: 1.26 <-
+    red = 403
+    turn = FALSE
+    dir = up
+  -> State: 1.27 <-
+    turn = TRUE
+    dir = left
+  -> State: 1.28 <-
+    red = 402
+    turn = FALSE
+    dir = up
+  -> State: 1.29 <-
+    turn = TRUE
+  -> State: 1.30 <-
+    red = 999
+    turn = FALSE
+    r_notDown = FALSE
+  -- Loop starts here
+  -> State: 1.31 <-
+    turn = TRUE
+  -> State: 1.32 <-
+    turn = FALSE
+  -> State: 1.33 <-
+    turn = TRUE
