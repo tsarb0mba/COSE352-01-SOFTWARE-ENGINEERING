@@ -33,8 +33,6 @@ Trace Type: Counterexample
     black = 201
     turn = TRUE
     dir = left
-    garo = 0
-    sero = 0
     blkStart = 201
     redGoal = 402
     redStart = 203

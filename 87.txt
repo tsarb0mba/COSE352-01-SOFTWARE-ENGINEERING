@@ -1,0 +1,748 @@
+*** This is NuSMV 2.6.0 (compiled on Wed Oct 14 15:36:00 2015)
+*** Enabled addons are: compass
+*** For more information on NuSMV see <http://nusmv.fbk.eu>
+*** or email to <nusmv-users@list.fbk.eu>.
+*** Please report bugs to <Please report bugs to <nusmv-users@fbk.eu>>
+
+*** Copyright (c) 2010-2014, Fondazione Bruno Kessler
+
+*** This version of NuSMV is linked to the CUDD library version 2.4.1
+*** Copyright (c) 1995-2004, Regents of the University of Colorado
+
+*** This version of NuSMV is linked to the MiniSat SAT solver. 
+*** See http://minisat.se/MiniSat.html
+*** Copyright (c) 2003-2006, Niklas Een, Niklas Sorensson
+*** Copyright (c) 2007-2010, Niklas Sorensson
+
+WARNING *** This version of NuSMV is linked to the zchaff SAT         ***
+WARNING *** solver (see http://www.princeton.edu/~chaff/zchaff.html). ***
+WARNING *** Zchaff is used in Bounded Model Checking when the         ***
+WARNING *** system variable "sat_solver" is set to "zchaff".          ***
+WARNING *** Notice that zchaff is for non-commercial purposes only.   ***
+WARNING *** NO COMMERCIAL USE OF ZCHAFF IS ALLOWED WITHOUT WRITTEN    ***
+WARNING *** PERMISSION FROM PRINCETON UNIVERSITY.                     ***
+WARNING *** Please contact Sharad Malik (malik@ee.princeton.edu)      ***
+WARNING *** for details.                                              ***
+
+-- specification !(!(red = black) U red = 999)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 1.1 <-
+    red = 613
+    black = 407
+    turn = TRUE
+    dir = down
+    blkStart = 407
+    redGoal = 614
+    redStart = 613
+    r_notDown = FALSE
+    r_notUp = TRUE
+    r_notRight = TRUE
+    r_notLeft = TRUE
+    b_notDown = TRUE
+    b_notUp = TRUE
+    b_notRight = FALSE
+    b_notLeft = TRUE
+  -> State: 1.2 <-
+    red = 713
+    black = 408
+    turn = FALSE
+    dir = up
+    r_notDown = TRUE
+    r_notUp = FALSE
+    r_notLeft = FALSE
+    b_notDown = FALSE
+    b_notUp = FALSE
+    b_notLeft = FALSE
+  -> State: 1.3 <-
+    black = 409
+    turn = TRUE
+    dir = left
+    b_notUp = TRUE
+    b_notRight = TRUE
+  -> State: 1.4 <-
+    red = 712
+    black = 509
+    turn = FALSE
+    dir = up
+    r_notDown = FALSE
+    r_notRight = FALSE
+    b_notUp = FALSE
+    b_notLeft = TRUE
+  -> State: 1.5 <-
+    black = 609
+    turn = TRUE
+    dir = down
+  -> State: 1.6 <-
+    red = 812
+    black = 709
+    turn = FALSE
+    dir = up
+    r_notDown = TRUE
+    b_notDown = TRUE
+    b_notRight = FALSE
+    b_notLeft = FALSE
+  -> State: 1.7 <-
+    black = 710
+    turn = TRUE
+    b_notDown = FALSE
+    b_notRight = TRUE
+  -> State: 1.8 <-
+    red = 712
+    black = 810
+    turn = FALSE
+    r_notDown = FALSE
+    b_notDown = TRUE
+    b_notRight = FALSE
+  -> State: 1.9 <-
+    black = 811
+    turn = TRUE
+    dir = left
+    b_notUp = TRUE
+  -> State: 1.10 <-
+    red = 711
+    black = 812
+    turn = FALSE
+    dir = up
+    r_notDown = TRUE
+    r_notLeft = TRUE
+    b_notUp = FALSE
+  -> State: 1.11 <-
+    black = 811
+    turn = TRUE
+    b_notUp = TRUE
+  -> State: 1.12 <-
+    red = 611
+    turn = FALSE
+    r_notDown = FALSE
+    r_notRight = TRUE
+  -> State: 1.13 <-
+    turn = TRUE
+  -> State: 1.14 <-
+    red = 511
+    turn = FALSE
+  -> State: 1.15 <-
+    turn = TRUE
+  -> State: 1.16 <-
+    red = 411
+    turn = FALSE
+    r_notLeft = FALSE
+  -> State: 1.17 <-
+    turn = TRUE
+  -> State: 1.18 <-
+    red = 311
+    turn = FALSE
+    r_notLeft = TRUE
+  -> State: 1.19 <-
+    turn = TRUE
+  -> State: 1.20 <-
+    red = 211
+    turn = FALSE
+  -> State: 1.21 <-
+    turn = TRUE
+  -> State: 1.22 <-
+    red = 111
+    turn = FALSE
+    r_notUp = TRUE
+    r_notRight = FALSE
+  -> State: 1.23 <-
+    turn = TRUE
+    dir = right
+  -> State: 1.24 <-
+    red = 112
+    turn = FALSE
+    dir = up
+    r_notLeft = FALSE
+  -> State: 1.25 <-
+    black = 812
+    turn = TRUE
+    b_notUp = FALSE
+  -> State: 1.26 <-
+    black = 712
+    turn = FALSE
+    b_notDown = FALSE
+  -> State: 1.27 <-
+    black = 612
+    turn = TRUE
+    dir = left
+    b_notRight = TRUE
+    b_notLeft = TRUE
+  -> State: 1.28 <-
+    red = 111
+    black = 512
+    turn = FALSE
+    dir = up
+    r_notLeft = TRUE
+    b_notRight = FALSE
+  -> State: 1.29 <-
+    black = 412
+    turn = TRUE
+    dir = down
+    b_notRight = TRUE
+  -> State: 1.30 <-
+    red = 211
+    black = 312
+    turn = FALSE
+    dir = up
+    r_notUp = FALSE
+    r_notRight = TRUE
+    b_notRight = FALSE
+  -> State: 1.31 <-
+    black = 212
+    turn = TRUE
+    dir = down
+    b_notUp = TRUE
+    b_notRight = TRUE
+  -> State: 1.32 <-
+    red = 311
+    turn = FALSE
+    dir = up
+  -> State: 1.33 <-
+    black = 312
+    turn = TRUE
+    dir = down
+    b_notUp = FALSE
+    b_notRight = FALSE
+  -> State: 1.34 <-
+    red = 411
+    turn = FALSE
+    dir = up
+    r_notLeft = FALSE
+  -> State: 1.35 <-
+    black = 412
+    turn = TRUE
+    dir = left
+    b_notRight = TRUE
+  -> State: 1.36 <-
+    red = 410
+    turn = FALSE
+    dir = up
+    r_notRight = FALSE
+    r_notLeft = TRUE
+  -> State: 1.37 <-
+    turn = TRUE
+    dir = down
+  -> State: 1.38 <-
+    red = 510
+    turn = FALSE
+    dir = up
+    r_notRight = TRUE
+  -> State: 1.39 <-
+    black = 512
+    turn = TRUE
+    dir = down
+    b_notRight = FALSE
+  -> State: 1.40 <-
+    red = 610
+    turn = FALSE
+    dir = up
+  -> State: 1.41 <-
+    black = 612
+    turn = TRUE
+    dir = down
+    b_notRight = TRUE
+  -> State: 1.42 <-
+    red = 710
+    turn = FALSE
+    dir = up
+    r_notLeft = FALSE
+  -> State: 1.43 <-
+    black = 712
+    turn = TRUE
+    dir = left
+    b_notRight = FALSE
+    b_notLeft = FALSE
+  -> State: 1.44 <-
+    red = 709
+    black = 711
+    turn = FALSE
+    dir = up
+    r_notDown = TRUE
+    r_notRight = FALSE
+    b_notDown = TRUE
+    b_notLeft = TRUE
+  -> State: 1.45 <-
+    turn = TRUE
+    dir = left
+  -> State: 1.46 <-
+    red = 708
+    turn = FALSE
+    dir = up
+    r_notDown = FALSE
+    r_notLeft = TRUE
+  -> State: 1.47 <-
+    turn = TRUE
+  -> State: 1.48 <-
+    red = 608
+    turn = FALSE
+    r_notRight = TRUE
+    r_notLeft = FALSE
+  -> State: 1.49 <-
+    black = 611
+    turn = TRUE
+    dir = left
+    b_notDown = FALSE
+    b_notRight = TRUE
+  -> State: 1.50 <-
+    red = 607
+    turn = FALSE
+    dir = up
+    r_notRight = FALSE
+    r_notLeft = TRUE
+  -> State: 1.51 <-
+    turn = TRUE
+    dir = down
+  -> State: 1.52 <-
+    red = 707
+    turn = FALSE
+    dir = up
+    r_notRight = TRUE
+    r_notLeft = FALSE
+  -> State: 1.53 <-
+    black = 711
+    turn = TRUE
+    dir = left
+    b_notDown = TRUE
+    b_notRight = FALSE
+  -> State: 1.54 <-
+    red = 706
+    turn = FALSE
+    dir = up
+    r_notDown = TRUE
+    r_notRight = FALSE
+  -> State: 1.55 <-
+    turn = TRUE
+    dir = left
+  -> State: 1.56 <-
+    red = 705
+    turn = FALSE
+    dir = up
+    r_notLeft = TRUE
+  -> State: 1.57 <-
+    turn = TRUE
+  -> State: 1.58 <-
+    red = 605
+    turn = FALSE
+    r_notDown = FALSE
+    r_notRight = TRUE
+    r_notLeft = FALSE
+  -> State: 1.59 <-
+    black = 611
+    turn = TRUE
+    b_notDown = FALSE
+    b_notRight = TRUE
+  -> State: 1.60 <-
+    red = 505
+    turn = FALSE
+    r_notLeft = TRUE
+  -> State: 1.61 <-
+    black = 511
+    turn = TRUE
+  -> State: 1.62 <-
+    red = 405
+    turn = FALSE
+    r_notUp = TRUE
+    r_notLeft = FALSE
+  -> State: 1.63 <-
+    black = 411
+    turn = TRUE
+    dir = down
+    b_notLeft = FALSE
+  -> State: 1.64 <-
+    red = 505
+    black = 410
+    turn = FALSE
+    dir = up
+    r_notUp = FALSE
+    r_notLeft = TRUE
+    b_notRight = FALSE
+    b_notLeft = TRUE
+  -> State: 1.65 <-
+    black = 510
+    turn = TRUE
+    dir = down
+    b_notRight = TRUE
+  -> State: 1.66 <-
+    red = 605
+    turn = FALSE
+    dir = up
+    r_notLeft = FALSE
+  -> State: 1.67 <-
+    black = 610
+    turn = TRUE
+    dir = left
+  -> State: 1.68 <-
+    red = 604
+    turn = FALSE
+    dir = up
+    r_notDown = TRUE
+    r_notRight = FALSE
+  -> State: 1.69 <-
+    turn = TRUE
+    dir = left
+  -> State: 1.70 <-
+    red = 603
+    turn = FALSE
+    dir = up
+  -> State: 1.71 <-
+    turn = TRUE
+    dir = left
+  -> State: 1.72 <-
+    red = 602
+    turn = FALSE
+    dir = up
+  -> State: 1.73 <-
+    turn = TRUE
+    dir = left
+  -> State: 1.74 <-
+    red = 601
+    turn = FALSE
+    dir = up
+    r_notDown = FALSE
+    r_notLeft = TRUE
+  -> State: 1.75 <-
+    turn = TRUE
+    dir = down
+  -> State: 1.76 <-
+    red = 701
+    turn = FALSE
+    dir = up
+    r_notDown = TRUE
+  -> State: 1.77 <-
+    black = 710
+    turn = TRUE
+    dir = right
+    b_notLeft = FALSE
+  -> State: 1.78 <-
+    red = 702
+    black = 709
+    turn = FALSE
+    dir = up
+    r_notUp = TRUE
+    r_notLeft = FALSE
+    b_notDown = TRUE
+    b_notRight = FALSE
+  -> State: 1.79 <-
+    black = 708
+    turn = TRUE
+    dir = right
+    b_notDown = FALSE
+    b_notLeft = TRUE
+  -> State: 1.80 <-
+    red = 703
+    turn = FALSE
+    dir = up
+    r_notDown = FALSE
+  -> State: 1.81 <-
+    turn = TRUE
+    dir = down
+  -> State: 1.82 <-
+    red = 803
+    turn = FALSE
+    dir = up
+    r_notUp = FALSE
+    r_notRight = TRUE
+    r_notLeft = TRUE
+  -> State: 1.83 <-
+    black = 808
+    turn = TRUE
+    dir = down
+  -> State: 1.84 <-
+    red = 903
+    turn = FALSE
+    dir = up
+    r_notDown = TRUE
+    r_notRight = FALSE
+    r_notLeft = FALSE
+  -> State: 1.85 <-
+    black = 908
+    turn = TRUE
+    b_notDown = TRUE
+    b_notRight = TRUE
+    b_notLeft = FALSE
+  -> State: 1.86 <-
+    red = 803
+    black = 907
+    turn = FALSE
+    r_notDown = FALSE
+    r_notRight = TRUE
+    r_notLeft = TRUE
+    b_notRight = FALSE
+  -> State: 1.87 <-
+    black = 906
+    turn = TRUE
+    b_notUp = TRUE
+  -> State: 1.88 <-
+    red = 703
+    black = 905
+    turn = FALSE
+    r_notUp = TRUE
+    r_notRight = FALSE
+    r_notLeft = FALSE
+  -> State: 1.89 <-
+    black = 904
+    turn = TRUE
+    dir = left
+    b_notUp = FALSE
+  -> State: 1.90 <-
+    red = 702
+    black = 903
+    turn = FALSE
+    dir = up
+    r_notDown = TRUE
+  -> State: 1.91 <-
+    black = 902
+    turn = TRUE
+    dir = left
+  -> State: 1.92 <-
+    red = 701
+    black = 802
+    turn = FALSE
+    dir = up
+    r_notUp = FALSE
+    r_notLeft = TRUE
+    b_notDown = FALSE
+    b_notUp = TRUE
+    b_notRight = TRUE
+    b_notLeft = TRUE
+  -> State: 1.93 <-
+    turn = TRUE
+  -> State: 1.94 <-
+    red = 601
+    turn = FALSE
+    r_notDown = FALSE
+  -> State: 1.95 <-
+    turn = TRUE
+    dir = right
+  -> State: 1.96 <-
+    red = 602
+    turn = FALSE
+    dir = up
+    r_notDown = TRUE
+    r_notLeft = FALSE
+  -> State: 1.97 <-
+    turn = TRUE
+    dir = right
+  -> State: 1.98 <-
+    red = 603
+    turn = FALSE
+    dir = up
+  -> State: 1.99 <-
+    turn = TRUE
+    dir = right
+  -> State: 1.100 <-
+    red = 604
+    turn = FALSE
+    dir = up
+  -> State: 1.101 <-
+    turn = TRUE
+    dir = right
+  -> State: 1.102 <-
+    red = 605
+    turn = FALSE
+    dir = up
+    r_notDown = FALSE
+    r_notRight = TRUE
+  -> State: 1.103 <-
+    turn = TRUE
+    dir = down
+  -> State: 1.104 <-
+    red = 705
+    turn = FALSE
+    dir = up
+    r_notDown = TRUE
+    r_notRight = FALSE
+    r_notLeft = TRUE
+  -> State: 1.105 <-
+    turn = TRUE
+    dir = right
+  -> State: 1.106 <-
+    red = 706
+    turn = FALSE
+    dir = up
+    r_notLeft = FALSE
+  -> State: 1.107 <-
+    turn = TRUE
+    dir = right
+  -> State: 1.108 <-
+    red = 707
+    turn = FALSE
+    dir = up
+    r_notDown = FALSE
+    r_notRight = TRUE
+  -> State: 1.109 <-
+    turn = TRUE
+  -> State: 1.110 <-
+    red = 607
+    turn = FALSE
+    r_notRight = FALSE
+    r_notLeft = TRUE
+  -> State: 1.111 <-
+    turn = TRUE
+    dir = right
+  -> State: 1.112 <-
+    red = 608
+    turn = FALSE
+    dir = up
+    r_notRight = TRUE
+    r_notLeft = FALSE
+  -> State: 1.113 <-
+    turn = TRUE
+    dir = down
+  -> State: 1.114 <-
+    red = 708
+    turn = FALSE
+    dir = up
+    r_notRight = FALSE
+    r_notLeft = TRUE
+  -> State: 1.115 <-
+    turn = TRUE
+    dir = right
+  -> State: 1.116 <-
+    red = 709
+    turn = FALSE
+    dir = up
+    r_notDown = TRUE
+    r_notLeft = FALSE
+  -> State: 1.117 <-
+    turn = TRUE
+    dir = right
+  -> State: 1.118 <-
+    red = 710
+    turn = FALSE
+    dir = up
+    r_notDown = FALSE
+    r_notRight = TRUE
+  -> State: 1.119 <-
+    turn = TRUE
+    dir = down
+  -> State: 1.120 <-
+    red = 810
+    turn = FALSE
+    dir = up
+    r_notDown = TRUE
+    r_notRight = FALSE
+  -> State: 1.121 <-
+    turn = TRUE
+    dir = right
+  -> State: 1.122 <-
+    red = 811
+    turn = FALSE
+    dir = up
+    r_notUp = TRUE
+  -> State: 1.123 <-
+    turn = TRUE
+    dir = right
+  -> State: 1.124 <-
+    red = 812
+    turn = FALSE
+    dir = up
+    r_notUp = FALSE
+  -> State: 1.125 <-
+    turn = TRUE
+    dir = right
+  -> State: 1.126 <-
+    red = 813
+    turn = FALSE
+    dir = up
+    r_notDown = FALSE
+    r_notUp = TRUE
+    r_notRight = TRUE
+  -> State: 1.127 <-
+    turn = TRUE
+    dir = down
+  -> State: 1.128 <-
+    red = 913
+    turn = FALSE
+    dir = up
+    r_notDown = TRUE
+    r_notUp = FALSE
+    r_notRight = FALSE
+  -> State: 1.129 <-
+    black = 902
+    turn = TRUE
+    dir = right
+    b_notDown = TRUE
+    b_notUp = FALSE
+    b_notRight = FALSE
+    b_notLeft = FALSE
+  -> State: 1.130 <-
+    red = 914
+    black = 903
+    turn = FALSE
+    dir = up
+    r_notRight = TRUE
+  -> State: 1.131 <-
+    black = 904
+    turn = TRUE
+  -> State: 1.132 <-
+    red = 814
+    black = 905
+    turn = FALSE
+    r_notDown = FALSE
+    r_notLeft = TRUE
+    b_notUp = TRUE
+  -> State: 1.133 <-
+    black = 906
+    turn = TRUE
+  -> State: 1.134 <-
+    red = 714
+    black = 907
+    turn = FALSE
+    b_notUp = FALSE
+  -> State: 1.135 <-
+    black = 908
+    turn = TRUE
+    b_notRight = TRUE
+  -> State: 1.136 <-
+    red = 614
+    black = 808
+    turn = FALSE
+    r_notUp = TRUE
+    b_notDown = FALSE
+    b_notRight = FALSE
+    b_notLeft = TRUE
+  -> State: 1.137 <-
+    black = 809
+    turn = TRUE
+    b_notUp = TRUE
+    b_notLeft = FALSE
+  -> State: 1.138 <-
+    red = 999
+    black = 810
+    turn = FALSE
+    r_notUp = FALSE
+    r_notRight = FALSE
+    r_notLeft = FALSE
+    b_notDown = TRUE
+    b_notUp = FALSE
+  -> State: 1.139 <-
+    black = 811
+    turn = TRUE
+    b_notUp = TRUE
+  -> State: 1.140 <-
+    black = 812
+    turn = FALSE
+    b_notUp = FALSE
+  -> State: 1.141 <-
+    black = 813
+    turn = TRUE
+    b_notDown = FALSE
+    b_notUp = TRUE
+    b_notRight = TRUE
+  -> State: 1.142 <-
+    black = 913
+    turn = FALSE
+    b_notDown = TRUE
+    b_notUp = FALSE
+    b_notRight = FALSE
+  -- Loop starts here
+  -> State: 1.143 <-
+    black = 914
+    turn = TRUE
+    b_notRight = TRUE
+  -> State: 1.144 <-
+    turn = FALSE
+  -> State: 1.145 <-
+    turn = TRUE

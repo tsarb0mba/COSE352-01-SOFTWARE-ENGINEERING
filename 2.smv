@@ -19,10 +19,6 @@ redStart := 203;
 redGoal := 402;
 blkStart := 201;
 
-sero:= 0;
-garo:=0;
-
-
 ASSIGN
 
 init(turn) := TRUE;
